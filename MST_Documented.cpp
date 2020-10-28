@@ -61,6 +61,8 @@ int main() {
           last = key;
           
           que.pop();
+	  if(visited[key]) // very important as a particular node might be entered multiple times
+              continue;
           
           visited[key] = 1;
           
