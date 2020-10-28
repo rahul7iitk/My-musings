@@ -78,6 +78,9 @@ void Graph::dijisktra()//real algorithm starts from here
 		// in pair)
 		int u = pq.top().second;
 		pq.pop();
+		
+		if(inMST[u]) // If already included, discard
+		   continue;
 
 		inMST[u] = true; // Include vertex in MST
 
